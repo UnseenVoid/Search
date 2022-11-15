@@ -1,0 +1,71 @@
+<html>
+
+<head>
+    <title>Search</title>
+    <link rel="stylesheet" href="search.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: url("bg/jett.jpg") no-repeat;
+            background-color: black;
+            background-size: 100%;
+            background-position: center;
+        }
+    </style>
+</head>
+
+<body class="bodyclass" onclick='document.getElementById("search-inp1").focus()'>
+    <div class="search-container" id="sc-box">
+        <input type="text" name="search" placeholder="Search..." class="search-input" id="search-inp1"
+            oninput="kinput()" onfocusout="outfocus()">
+        <a href="#" class="search-btn" id="search-but1">
+            <div style="width: 50px; height: 50px; display: flex;justify-content: center;align-items: center; background-color: white;border-radius: 50%;">
+                <img src="ms-icon-310x310.png" class="fas" width="30x" height="auto">
+            </div>
+        </a>
+    </div>
+    <script>
+
+        let query = document.querySelector('.search-input');
+        let searchbtn = document.querySelector('.search-btn');
+        let hiddenbutton = document.querySelector('.sub-button');
+        searchbtn.onclick = function () {
+            if (query.value == "") {
+                outfocus();
+            }
+            else {
+                let url = 'https://duckduckgo.com/?q=' + query.value;
+                window.open(url)
+                query.value = "";
+                document.getElementById("search-but1").click();
+            }
+        }
+        
+        var input = document.getElementById("search-inp1");
+        input.focus()
+        input.addEventListener("keypress", function (event) {
+            if (event.key === "Enter") {
+                event.preventDefault();
+                if (query.value == "") {
+                    outfocus();
+                }
+                else {
+                    document.getElementById("search-but1").click();
+                }
+            }
+        });
+        const kinput = () => {
+            input.style.width = "400px";
+            input.style.caretColor = "black";
+            document.getElementById('sc-box').style.paddingLeft = "20px";
+        }
+
+        function outfocus() {
+            input.style = ".search-container";
+            input.focus()
+        }
+    </script>
+</body>
+
+</html>

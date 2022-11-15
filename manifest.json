@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Search Me",
+  "version": "1.0",
+  "description": "just search tab",
+  "author": "doctor souls",
+  "chrome_url_overrides" : {
+    "newtab": "index.html"
+  },
+  "permissions": [
+    "storage"]
+    ,
+  "icons": {
+    "16": "ms-icon-310x310.png",
+    "128": "ms-icon-310x310.png"
+  }
+}
