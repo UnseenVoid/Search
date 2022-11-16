@@ -1,7 +1,7 @@
 # Search
 <h2>Custom search Page [JETT From Valorant]</h2><br>
 <b>Download the Chrome Extension From below </b><br>
-<a href="https://drive.google.com/file/d/1X26-omG39vWG6jgwFkLGtMx4zxAlKZQ8/view"><b>v1.02-Download</b></a>
+<a href="https://cdn.discordapp.com/attachments/1042506781592666122/1042506866636365904/searchTAB.zip"><b>v1.02-Download</b></a>
 
 <h2>Installation For Chrome</h2>
 - Download zip from above file <br>
